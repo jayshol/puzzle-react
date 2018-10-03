@@ -1,5 +1,12 @@
 language: node_js
- node_js: node
- cache:
-   directories:
-     - node_modules
+node_js: node
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: ErImPZkTRV6hDZH7DP8JXHbELiHTUii7zJdrysTm4wr+dycPmbAt+UEaBVzkgV36T0c3PO9w/kST4wU2evYn4GXbJqwhggOyNovY14APRDv/CzIYO8ntNwsiOe66LnxRfohEVChtgKMLL6SAwl7jbRRekzdvqDp8hvVYUq6IAwmrEm+a2mLYSPMgZdChdQhB36P5TnzLfahBn9yhtNICZIUeLzkPE9XSiLV4tYUDPSGjFyip2wV1Oo4VYtmPCdTejx3rUnmTIdKYcyGcsB3ztq5dA5EcU8QtcKjLVVi9LK0jQq5h1j4eY7bkIx6W81jDZkqIyQCcHQFuYsVanEfF4xVSx6WSIylDN8IFovxu+8t307FrekoiIGdkZeoA96vylvFe52SSoZKdXzfCXq94K+uCQf6i0EIljxYrrwBs2YrgJd31cH1VoRlOlYGYwSDFt6hfn4yS6o7nVWFL30YOspn3XW9M5lHbvYyQWI2D9NNhTAyvPTU01JGijlU14j10wp9qanYNkLte/HxpzvTAnYn75ZSTZkhDQIJj+dpjqMLaMoCq7GhiB0HumKnyBP6dXa08KI6Hw1McPuEdaD1jqU0DbuUhWMBsTA7vHLYKrAv1Mvn7vuEgS8WiRZS7nBJeYXxwuF83HtzeMJxNHYVoB3nqYTOQpRiFcx0mFzkLKZ8=
+  app: fathomless-plains-59362
+  on:
+    repo: jayshol/puzzle-react
