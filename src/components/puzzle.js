@@ -24,13 +24,12 @@ export class Puzzle extends React.Component{
 		this.handleDrop = this.handleDrop.bind(this);
 		this.handleDragOver = this.handleDragOver.bind(this);
 		this.count = 0;
+		let message = (this.props.mobileDevice)? 'View only': '';
 		this.state = {
 			time:0,
 			result:'',
-			message: ''			
-		};
-
-		this.checkDevice();
+			message: message			
+		};		
 
 	}
 
@@ -43,16 +42,15 @@ export class Puzzle extends React.Component{
 		this.checkDevice();
 	}	
 
-	checkDevice(){		
-		if(this.props.mobileDevice){
-			this.setState({
-				message: 'View Only'
-			});
-		} else {
-			this.setState({
-				message: ''
-			});
-		}			
+	checkDevice(){
+		let message = (this.props.mobileDevice) ? 'View Only': '';		
+		this.setState({
+			message: message
+		});			
+	}
+
+	componentDidUpdate(){
+		//this.checkDevice();
 	}
 
 	startTimer(){
