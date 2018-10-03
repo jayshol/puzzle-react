@@ -1,0 +1,109 @@
+.dashboardCls{
+	width:100%;
+	height:94vh;
+}
+.contentDiv{
+	width: 80%; 	
+	display: block;
+	height: 90vh;
+	text-align: center;
+	margin:0 auto;
+	background-color: rgba(255,255,255,0.7);
+}
+
+h1{
+	text-align: center;
+	color:blue;
+}
+
+.listHeaders, .puzzlesDiv{
+	background-color:#FFED3D;
+	border:1px solid white;
+	color:blue;
+	width: 71%;	
+	margin:0 auto;
+}
+
+.listHeaders>div {
+	display:inline-block;
+	border:1px solid white;
+	font-size: 20px;
+	font-weight: bold;
+	height: 50px;
+	width: 24.75%;
+	border-right: 1px solid white;
+	line-height: 50px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.puzzlesDiv{
+	margin: 0 auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 70%;	
+}
+
+#closeBtn{
+	height:45px;
+	width: 200px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: blue;
+	color:white;
+	border-radius: 15px;
+}
+
+.buttonDiv{
+	margin:15px;
+}
+
+/* ipad pro  */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+	.contentDiv{
+		width: 100%; 			
+	}
+
+	.listHeaders, .puzzlesDiv{		
+		width: 91%;			
+	}
+
+	.listHeaders>div {		
+		font-size: 18px;
+		width: 24%;		
+	}
+
+	.buttonDiv{
+		margin:25px;
+	}
+}
+
+@media only screen and (max-device-width: 480px), 
+	   only screen and (min-device-width: 560px)	   
+	   and (-webkit-min-device-pixel-ratio: 2) {
+
+	   	.contentDiv{
+			width: 100%;
+			height: 83vh; 			
+		}
+
+		.listHeaders, .puzzlesDiv{		
+			width: 91%;			
+		}
+
+		.listHeaders>div {		
+			font-size: 12px;
+			width: 24%;		
+		}
+
+		.buttonDiv{
+			margin:8px;			
+		}
+
+		.#closeBtn{
+			font-size: 8px;
+		}
+
+}  

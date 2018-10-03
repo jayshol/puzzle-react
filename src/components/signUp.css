@@ -1,0 +1,61 @@
+.signUpForm{
+	color: black;
+	font-size: 20px;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 10px;
+	width: 350px;
+	height: 400px;	
+	padding: 35px 15px 35px 15px;
+	border: 1px solid blue;	
+}
+
+#signUp-form{
+	height:100%;
+  	padding: 45px;  
+  	border:0;
+
+}
+
+legend{
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 0 auto;
+  width:100%;
+  text-align:center;
+  color: black;
+}
+
+input{
+	font-size: 20px;
+	margin-top:10px;
+	margin-bottom: 15px;
+	border:1px solid blue;
+}
+label{
+	font-size: 18px;
+	font-weight: bold;
+	color:black;
+}
+
+.signUpForm div > button{
+	height: 35px;
+	width: 100px;
+	margin-top: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.centerDiv{
+	text-align: center;
+}
+
+@media only screen and (max-device-width: 480px), 
+	   only screen and (min-device-width: 560px)	   
+	   and (-webkit-min-device-pixel-ratio: 2) {
+
+	.signUpForm{
+		width: 288px;
+		height:350px;
+	}
+}

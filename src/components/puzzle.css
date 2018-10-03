@@ -1,0 +1,202 @@
+.ImageDiv{	
+	/*height: 550px;
+	width: 550px;	*/
+	margin:40px auto 15px auto; 
+	position: relative;
+	display:inline-block;	
+}
+
+.imageCls{
+	/*width: 100%;
+	height:100%;*/
+	position:relative;
+	/*opacity:0.5;*/
+}
+
+.wrapperDiv{
+	width: 100%;
+   	float: left;
+ /*  	position: relative;
+   	overflow: hidden;   */
+   	text-align:center;
+   	background-color: #edecaa;   	
+}
+
+.piecesContainer{
+	width: 70%; 
+   	height: auto;
+  
+  border: .5px solid grey;
+  overflow-x:auto;
+  white-space: nowrap;
+  
+  margin:30px auto 30px auto;
+}
+
+.pieceStyle{
+	
+	height: 120px;
+	width: 120px;
+	background-color: green;
+	color:white;
+	font-size: 22px;
+/*	top: 20px;*/
+/*	left: 30px;  */
+	display:inline-block;
+	border:1px solid white;	
+}
+
+.buttonCls{	
+	height: 50px;
+	width: 120px;
+	display:block;	
+	margin: 120px auto 0 auto;
+	background-color: blue;
+	color:white;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 15px;
+}
+.outerDiv{
+	/*position:relative;*/
+	height:94vh;
+	background-color: #edecaa;
+}
+
+#slotsSpan{
+	position:absolute;
+	display:inline-block;
+	height: auto;
+	width: auto;
+	border:.01px solid red;
+	left:0;
+	top:0;
+}
+
+.slotClass{
+	background-color: white;
+	border:1px solid blue;
+	display:inline-block;
+	position:absolute;
+	opacity:0.5;
+	filter: alpha(opacity=50)
+}
+/* galaxy S5 */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+	   	
+		.ImageDiv{	
+			height: 300px;
+			width: 300px;	
+			margin:40px auto 15px auto; 
+			position: relative;
+			display:inline-block;	
+		}	
+		
+
+		#puzzleImage{
+			width:100%;
+			height:100%; 
+		}
+
+		.wrapperDiv{
+			/*background-color: blue;*/
+			
+			width:100%;
+			height:100vh;
+		}
+		.outerDiv{
+		/*	border:3px solid black;*/
+			width:100%;
+			overflow:auto;
+			height:100vh;
+		/*	background-color: blue;*/
+		}
+
+		#slotsSpan{
+			height: 300px;
+			width: 300px;
+			overflow: hidden;	
+		}
+
+		.pieceStyle{
+	
+			height: 80px;
+			width: 80px;
+			background-color: green;
+			color:white;
+			font-size: 22px;
+		/*	top: 20px;*/
+		/*	left: 30px;  */
+			display:inline-block;
+			border:1px solid white;	
+		}
+		.piecesContainer{
+			height: 160px;
+		}
+
+}
+/* iphone x */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+
+    	.ImageDiv{	
+			height: 300px;
+			width: 300px;				
+		}
+		#puzzleImage{
+			width:100%;
+			height:100%; 
+		}
+
+		#slotsSpan{
+			height: 300px;
+			width: 300px;
+			overflow:hidden;	
+		}
+
+
+     }
+
+/* ipad */
+@media only screen and (max-device-width: 480px), 
+	   only screen and (min-device-width: 560px)	   
+	   and (-webkit-min-device-pixel-ratio: 2) {
+
+	.wrapperDiv{
+		width: 100%;
+	   	float: left;
+	 /*  	position: relative;
+	   	overflow: hidden;   */
+	   	text-align:center;
+	   	background-color: #edecaa;   	
+	}
+
+	.outerDiv{
+		/*position:relative;*/
+		height:98vh;
+		/*background-color: blue; */
+	}	
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.ImageDiv{	
+			height: 300px;
+			width: 300px;				
+		}
+		#puzzleImage{
+			width:100%;
+			height:100%; 
+		}
+
+		#slotsSpan{
+			height: 300px;
+			width: 300px;
+			overflow:hidden;	
+		}
+}

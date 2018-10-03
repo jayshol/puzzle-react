@@ -1,0 +1,16 @@
+.homeCls{
+	height: 94vh;
+	width:100%;
+	display:grid;
+	align-items: center;
+	justify-content: center; 	 		
+}
+
+.bannerCls{
+	font-size: 68px;		
+	padding:0;
+	margin:0 auto;
+	color: Red;
+	font-style: italic;
+	background-color: white;
+}
