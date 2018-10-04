@@ -19,7 +19,7 @@ export class LoginForm extends React.Component{
 	            );
 	        }
 		return (
-			<form role="form" className="loginForm"
+			<form className="loginForm"
 				onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>

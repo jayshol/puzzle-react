@@ -6,15 +6,14 @@ import './topNav.css';
 export function TopNav(props){
 	const menuItems = props.menuItems.map(menuItem => {
 		// filter menuitems based on status of login
-		if((menuItem.loggedIn === props.loggedIn)){
+		if(menuItem.loggedIn === props.loggedIn){
 			return (<li key={menuItem.id}>
 					<Link className="linkCls" to={`/${menuItem.id}`}>
 						{menuItem.name}
 					</Link>
 				</li>);
 		}
-
-		
+		return null;		
 	});
 
 	return (

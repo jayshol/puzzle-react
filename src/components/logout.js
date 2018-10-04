@@ -5,8 +5,7 @@ import {clearAuthToken} from '../local-storage';
 import {Redirect} from 'react-router-dom';
 
 
-export function Logout(props){
-	let loggedOut = false;
+export function Logout(props){	
 
 	if(props.loggedIn){		
 		props.dispatch(clearAuth());		

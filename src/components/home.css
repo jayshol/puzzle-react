@@ -11,6 +11,19 @@
 	padding:0;
 	margin:0 auto;
 	color: Red;
-	font-style: italic;
-	background-color: white;
+	font-style: italic;	
+}
+
+.captionClass{
+	color:black;
+	font-weight: bolder;
+	font-size: 28px;
+	font-style:italic;
+	width:50%;
+	margin:0 auto;
+
+}
+
+.coverDiv{
+	background-color: rgba(255,255,255,0.7);	
 }

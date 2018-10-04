@@ -3,7 +3,6 @@ import './registration-form.css';
 import {Field, reduxForm, focus} from 'redux-form';
 import { Redirect} from 'react-router-dom';
 import {registerUser} from '../actions/users';
-import {login} from '../actions/auth';
 import Input from './input';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
 const passwordLength = length({min: 6, max: 72});
@@ -41,7 +40,7 @@ export class RegistrationForm extends React.Component{
 		}
 
 		return(
-			<form role="form" className="signUpForm" 
+			<form className="signUpForm" 
 				onSubmit={this.props.handleSubmit(values =>this.onSubmit(values))}>
 					<fieldset id="signUp-form">
 						<legend>

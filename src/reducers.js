@@ -60,17 +60,14 @@ export default function reducer(state= initialState, action){
 	if(action.type === MAKE_PUZZLE_PIECES){
 		const imageUrl = action.imageUrl;
 		const imgWidth = action.imageWidth;
-		const imgHeight = action.imageHeight;
-		console.log(action.level);
+		const imgHeight = action.imageHeight;		
 		const level = state.levels.find((level) =>{			
 			return level.id === action.level;
 		});
 		
 		const rowCol = level.rowColNumber;
 		const pieceWidth = imgWidth /rowCol;
-		const pieceHeight = imgHeight/rowCol;
-		const maxX = 700 - pieceWidth;
-		const maxY = 700 - pieceHeight;
+		const pieceHeight = imgHeight/rowCol;		
 		const totPieces = [];
 		const slots = [];
 
@@ -84,10 +81,7 @@ export default function reducer(state= initialState, action){
 					id:id,					
 					pos:pos,
 					width: pieceWidth,
-					height: pieceHeight,
-				/*	left:Math.floor(Math.random()*(maxY+1)),
-					top:Math.floor(Math.random()*(maxX+1)),*/
-				/*	zIndex: Math.floor(Math.random()*10+1), */
+					height: pieceHeight,				
 					backgroundImage: 'url('+ imageUrl +')',
 					backgroundPosition: (-y*pieceWidth)+'px '+(-x*pieceHeight)+'px',					
 					backgroundSize: imgWidth + 'px ' + imgHeight + 'px',
@@ -102,14 +96,7 @@ export default function reducer(state= initialState, action){
 			        const j = Math.floor(Math.random() * (i + 1));
 			        [totPieces[i], totPieces[j]] = [totPieces[j], totPieces[i]]; // eslint-disable-line no-param-reassign
 			    }
-
-				
-				const slotStyle= {
-					width: pieceWidth,
-                    height: pieceHeight,
-                    left: y*pieceWidth,
-                    top: x*pieceHeight
-				}
+								
 
 				const slotObject = {
 					width: pieceWidth,
@@ -161,28 +148,27 @@ export default function reducer(state= initialState, action){
 	}
 
 	if(action.type === FETCH_MESSAGE_SUCCESS){
-		console.log(action.message.message);
+		
 		return Object.assign({}, state, {
 			message: action.message.message
 		});
 	}
 
 	if(action.type === FETCH_IMAGE_SUCCESS){
-		console.log(action.images);
+		
 		return Object.assign({}, state, {
 			images: action.images
 		});
 	}
 
 	if(action.type === FETCH_USER_SUCCESS){
-		console.log(action.user);
+		
 		return Object.assign({}, state, {
 			user:action.user[0]
 		});
 	}
 
-	if(action.type == UPDATE_USER_SUCCESS){
-		console.log(action.user);
+	if(action.type === UPDATE_USER_SUCCESS){		
 		return Object.assign({}, state, {
 			user: action.user
 		});

@@ -1,7 +1,7 @@
 import {API_BASE_URL} from './config';
 import {normalizeResponseErrors} from './actions/utils';
 import {clearAuthToken} from './local-storage';
-import {clearAuth, CLEAR_AUTH} from './actions/auth';
+import {clearAuth} from './actions/auth';
 
 
 
@@ -76,7 +76,7 @@ export const fetchUserSuccess = user => ({
 });
 
 export const fetchUserObject = (userName) => (dispatch, getState) => {
-	console.log(userName);
+	
 	const authToken = getState().auth.authToken;
 	fetch(`${API_BASE_URL}/users/${userName}`, {
 		method: 'GET',
@@ -113,7 +113,7 @@ const clearUserInfo = (dispatch) => {
 }
 
 export const updateUser = (userObject, userId) => (dispatch, getState) => {
-	console.log(JSON.stringify(userObject));
+	
 	const authToken = getState().auth.authToken;
 	fetch(`${API_BASE_URL}/users/${userId}`,{
 		method:'PUT',
@@ -125,7 +125,7 @@ export const updateUser = (userObject, userId) => (dispatch, getState) => {
 	})
 	.then(res => normalizeResponseErrors(res))
 	.then(res => res.json())
-	.then(user => dispatch(updateUserSuccess(user)))
+	.then(res => dispatch(updateUserSuccess(res)))
 	.catch(err => {
 		dispatch(authError(err));
 	});

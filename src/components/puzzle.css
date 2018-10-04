@@ -81,6 +81,12 @@
 	opacity:0.5;
 	filter: alpha(opacity=50)
 }
+
+.messageCls{
+	color:red;
+	font-weight: bolder;
+}
+
 /* galaxy S5 */
 @media screen 
   and (device-width: 360px) 
