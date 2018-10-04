@@ -26,11 +26,11 @@
 	width: 70%; 
    	height: auto;
   
-  border: .5px solid grey;
+ /* border: .5px solid grey;*/
   overflow-x:auto;
   white-space: nowrap;
   
-  margin:30px auto 30px auto;
+  margin:25px auto 25px auto;
 }
 
 .pieceStyle{
