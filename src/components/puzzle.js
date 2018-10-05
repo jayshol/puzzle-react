@@ -22,7 +22,7 @@ export class Puzzle extends React.Component{
 		this.handleDragOver = this.handleDragOver.bind(this);
 		this.handleResize = this.handleResize.bind(this);
 		this.count = 0;
-		let message = (this.props.mobileDevice)? 'View only': '';
+		let message = (this.props.mobileDevice)? 'View only in mobile': '';
 		this.state = {
 			time:0,
 			result:'',
@@ -33,7 +33,7 @@ export class Puzzle extends React.Component{
 
 	handleResize(e){
 		let width = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;		
-		let message = (width <= 1024) ? 'View Only': '';
+		let message = (width <= 1024) ? 'View Only in mobile': '';
 		this.setState({
 			message :message
 		});
@@ -151,8 +151,8 @@ export class Puzzle extends React.Component{
 					<div className="piecesContainer">							
 						{ pieces }  
 					</div>
-				</div>
-				<button className="buttonCls" onClick={this.reStartGame}>Restart</button>
+					<button className="buttonCls" onClick={this.reStartGame}>Restart</button>
+				</div>				
 			</div>			
 		);
 	}
