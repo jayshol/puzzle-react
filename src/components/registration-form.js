@@ -19,6 +19,10 @@ export class RegistrationForm extends React.Component{
 		}
 	}
 
+	componentDidMount(){
+		document.getElementById("userName").focus();
+	}
+
 	onSubmit(values) {
         const {userName, password} = values;
         const user = {userName, password};
@@ -50,7 +54,7 @@ export class RegistrationForm extends React.Component{
 		                <Field
 		                    component={Input}
 		                    type="text"
-		                    name="userName"
+		                    name="userName"		                    
 		                    validate={[required, nonEmpty, isTrimmed]}
 		                />
 
