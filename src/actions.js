@@ -107,8 +107,14 @@ export const authError = error => ({
     error
 });
 
+export const CLEAR_USER_OBJECT = 'CLEAR_USER_OBJECT';
+export const clearUserObject = () => ({
+	type: CLEAR_USER_OBJECT
+});
+
 const clearUserInfo = (dispatch) => {
 	dispatch(clearAuth());
+	dispatch(clearUserObject());
     clearAuthToken();
 }
 

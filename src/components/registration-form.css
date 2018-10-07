@@ -13,3 +13,11 @@ input[type=text], input[type=password]{
 	background-color: blue;
 	color:white;	
 }
+
+.errCls{
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
+import {clearUserObject} from '../actions';
 import {clearAuthToken} from '../local-storage';
 import {Redirect} from 'react-router-dom';
 
@@ -8,7 +9,8 @@ import {Redirect} from 'react-router-dom';
 export function Logout(props){	
 
 	if(props.loggedIn){		
-		props.dispatch(clearAuth());		
+		props.dispatch(clearAuth());
+		props.dispatch(clearUserObject());
 		clearAuthToken();
 	}
 

@@ -15,8 +15,9 @@ export class RegistrationForm extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			signedup:false
-		}
+			signedup:false,
+			message:''
+		}		
 	}
 
 	componentDidMount(){
@@ -29,21 +30,31 @@ export class RegistrationForm extends React.Component{
         console.log(user);
         return this.props
             .dispatch(registerUser(user))
-            .then(() => this.moveToLogin());
+            .then(() => this.moveToLogin())
+            .catch(err => this.setError(err));         
     }
 
     moveToLogin(){
     	this.setState({
-    		signedup:true
+    		signedup:true,
+    		message: 'Successfully signed up. Please login.'
     	});    	
+    }
+
+    setError(err){    	
+    	this.setState({
+    		message:err.errors.message + "."
+    	}); 
     }
 
 	render(){
 		if(this.state.signedup){
-			return <Redirect to="/login" />;
-		}
+			return <Redirect to={{pathname:"/login", message:this.state.message}} />;
+		} 		
 
 		return(
+			<div>
+			<div className="errCls">{this.state.message}</div>
 			<form className="signUpForm" 
 				onSubmit={this.props.handleSubmit(values =>this.onSubmit(values))}>
 					<fieldset id="signUp-form">
@@ -79,7 +90,8 @@ export class RegistrationForm extends React.Component{
 		                    Sign Up
 		                </button>
 					</fieldset>
-				</form>		
+				</form>
+			</div>				
 		)
 	}
 }

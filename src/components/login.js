@@ -12,7 +12,10 @@ export function Login(props){
 
 	return(
 		<section className="login-window homeCls">
-			<LoginForm />	
+			<div>
+				<div className="msgClass">{props.location.message}</div>
+				<LoginForm />
+			</div>	
 		</section>
 	)
 

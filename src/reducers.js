@@ -6,7 +6,8 @@ import {MAKE_PUZZLE_PIECES,
 		FETCH_USER_SUCCESS,
 		UPDATE_USER_SUCCESS,
 		AUTH_ERROR,
-		REMOVE_SLOT_PIECES } from './actions';
+		REMOVE_SLOT_PIECES,
+		CLEAR_USER_OBJECT } from './actions';
 
 const initialState = {
 	pieces:[],
@@ -178,6 +179,12 @@ export default function reducer(state= initialState, action){
         return Object.assign({}, state, {            
             error: action.error
         });
+    }
+
+    if(action.type === CLEAR_USER_OBJECT){
+    	return Object.assign({}, state, {
+    		user:{}
+    	});
     }
 	return state;
 }
