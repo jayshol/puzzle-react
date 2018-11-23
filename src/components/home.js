@@ -7,7 +7,7 @@ export function Home(){
 		<div className="homeCls">
 			<div className="coverDiv">
 				<h1 className="bannerCls">Puzzle-Mania</h1>
-				<div className="captionClass">Free online puzzle games with many beautiful pictures to help you enjoy your free time.</div>
+				<div className="captionClass">Free, beautiful online puzzle games for your free time.</div>
 			</div>
 		</div>
 	)
