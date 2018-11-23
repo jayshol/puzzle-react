@@ -15,8 +15,6 @@ The following accounts are already registered and available for testing.
 UserName Password
 
 test 	 test123
-pinky	 pinky123
-master	 master
 
 ## Screen shots
 
