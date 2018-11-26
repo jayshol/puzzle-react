@@ -33,7 +33,7 @@ export class Puzzle extends React.Component{
 
 	handleResize(e){
 		let width = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;		
-		let message = (width <= 1024) ? 'View Only in mobile': '';
+		let message = (width <= 1024) ? 'Puzzles are not playable on mobile devices': '';
 		this.setState({
 			message :message
 		});
@@ -90,7 +90,7 @@ export class Puzzle extends React.Component{
 		if(this.count === this.props.piecesCount){
 			clearInterval(this.timer);
 			this.setState({
-				result: 'Congratulations. You solved the puzzle ' + this.state.time + ' seconds.'
+				result: 'Congratulations. You solved the puzzle in ' + this.state.time + ' seconds.'
 			});
 			const puzzleObject = {
 				puzzleName: this.props.image.name,
@@ -139,9 +139,10 @@ export class Puzzle extends React.Component{
 		return (
 			<div className="outerDiv" id="outerDiv" ref={div =>(this.div = div)}>
 				<div id="wrapperDiv" className="wrapperDiv">
-					<h1>{formatTime(this.state.time)}</h1>
-					<h2>{this.state.result}</h2>
+					<h1>{formatTime(this.state.time)}</h1>					
 					<h2 className="messageCls">{this.state.message}</h2>
+					<h2>To complete the puzzle, drag and drop the puzzle pieces over the picture</h2>
+					<h2>{this.state.result}</h2>
 					<div className="ImageDiv" >
 						<img id="puzzleImage" className="imageCls" src={process.env.PUBLIC_URL +`${this.props.image.url}`} alt="puzzle board"/>
 						<span id="slotsSpan">

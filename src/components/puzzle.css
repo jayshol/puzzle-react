@@ -45,7 +45,7 @@
 /*	top: 20px;*/
 /*	left: 30px;  */
 	display:inline-block;
-	border:1px solid white;	
+	border:3px solid white;	
 }
 
 .buttonCls{	
@@ -87,6 +87,14 @@
 .messageCls{
 	color:red;
 	font-weight: bolder;
+}
+
+.wrapperDiv h1{
+	margin: 3px;
+	font-size: 20px;
+}
+.wrapperDiv h2{
+	font-size: 18px;
 }
 
 /* galaxy S5 */
