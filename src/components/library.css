@@ -49,8 +49,8 @@
 	   and (-webkit-min-device-pixel-ratio: 2) {
 
 	   	.imageIcon{
-			height: 70px;
-			width: 70px;
+			height: 90px;
+			width: 90px;
 			margin: 10px;
 		}
 
@@ -118,7 +118,112 @@ and (max-device-width : 1024px)  {
 		}
 }
 
+@media only screen and (max-width: 480px), 
+	   only screen and (min-width: 560px)	   
+	   and (-webkit-min-device-pixel-ratio: 2) {
 
+	   	.imageIcon{
+			height: 70px;
+			width: 70px;
+			margin: 10px;
+		}
+
+		.content{
+			/*border:1px solid blue;*/
+			height:55%;
+			width: 90%;
+			text-align: center;
+			margin:0 auto;
+			background-color: rgba(255,255,255,0.7);
+			border-radius: 15px;
+		}
+
+		.optionLabel{
+			/*border: 1px solid black;*/
+			height: 45px;
+			width: 45%;
+			display:inline-block;
+			font-size: 12px;
+			text-align: center;
+			background-color: white;
+		}
+	
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px)  { 
+	.imageIcon{
+			height: 150px;
+			width: 150px;
+			margin: 15px;
+	}
+
+	.optionLabel{
+			/*border: 1px solid black;*/
+			height: 45px;
+			width: 30%;
+			display:inline-block;
+			font-size: 20px;
+			text-align: center;
+			background-color: white;
+		}
+
+}
+
+@media only screen 
+  and (min-width: 734px) 
+  and (max-width: 1112px){
+  	.imageIcon{
+			height: 120px;
+			width: 120px;
+			margin: 15px;
+	}
+
+	.optionLabel{
+			/*border: 1px solid black;*/
+			height: 45px;
+			width: 45%;
+			display:inline-block;
+			font-size: 20px;
+			text-align: center;
+			background-color: white;
+		}
+
+  }
+
+  @media only screen and (min-width: 433px)
+   and (max-width: 733px){
+
+   	.imageIcon{
+			height: 70px;
+			width: 70px;
+			margin: 10px;
+	}
+
+.optionLabel{
+		/*border: 1px solid black;*/
+		height: 45px;
+		width: 42%;
+		display:inline-block;
+		font-size: 13px;
+		text-align: center;
+		background-color: white;
+	}
+
+   }
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  	.imageIcon{
+			height: 220px;
+			width: 220px;
+			margin: 10px;
+	}
+
+}
 
 
 
