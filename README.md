@@ -6,7 +6,7 @@ The users have to register in order play games. Once a user registers and logs i
 
 ## Demo
 
-[Live demo](https://fathomless-plains-59362.herokuapp.com)
+[Live demo](https://jigsaw-puzzle-app.herokuapp.com)
 
 ## Notes
 
