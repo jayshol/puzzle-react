@@ -12,4 +12,15 @@
 
 input[type=text], input[type=password]{
 	width:95%;
+	padding-left:3px;
+}
+
+.demoClass{
+	font-size:14px;
+	font-weight: 550;
+}
+
+.demoClass div:first-child{
+	text-decoration: underline;
+	margin-bottom: 5px;
 }

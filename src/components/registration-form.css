@@ -1,5 +1,6 @@
 input[type=text], input[type=password]{
 	width:95%;
+	padding-left:3px;
 }
 
 #signUpBtn {

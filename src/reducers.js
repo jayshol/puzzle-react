@@ -19,7 +19,7 @@ const initialState = {
 	},
 	{
 		id: 'signUp',
-		name: 'SignUp',
+		name: 'Sign Up',
 		loggedIn:false		
 	},
 	{
