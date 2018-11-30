@@ -12,9 +12,9 @@ The users have to register in order play games. Once a user registers and logs i
 
 The following accounts are already registered and available for testing.
 
-UserName Password
+UserName: test
 
-test 	 test123
+Password: test123
 
 ## Screen shots
 
