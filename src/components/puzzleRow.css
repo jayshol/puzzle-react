@@ -9,7 +9,7 @@
 
 .listPuzzles>div {
 	display:inline-block;
-	border:1px solid white;
+/*	border:1px solid white;*/
 	font-size: 20px;
 	font-weight: bold;
 	height: 50px;
@@ -17,6 +17,7 @@
 	border-right: 1px solid grey;
 	line-height: 50px;
 	vertical-align: middle;
+	overflow:hidden;
 }
 
 @media only screen 
@@ -63,27 +64,70 @@ and (max-device-width : 1024px) {
 
 }
 
-@media only screen and (max-width: 480px), 
-	   only screen and (min-width: 560px) {
+@media only screen and (min-width: 480px), 
+	   only screen and (max-width: 510px) {
 
 	.listPuzzles>div {		
 		font-size: 16px;
-		width: 24%;		
+	/*	width: 24%;	*/	
 	}
 
+}
+
+@media only screen and (max-width: 617px),
+	   only screen and (min-width: 511px){
+
+	   	.listPuzzles>div{
+	   		font-size:14px;
+	   	}
+
+	   	.puzzlesDiv, .listHeaders {
+	   		width:90%;
+	   	}
+}
+
+@media only screen and (min-width:618px)	{
+	.puzzlesDiv, .listHeaders{
+		width:60%;
+	}
+	.listPuzzles>div, .listHeaders>div{
+		font-size: 18px;
+	}
 }
 
 @media only screen 
   and (min-width: 320px) 
   and (max-width: 568px){
   	.listPuzzles>div {
-   		font-size: 10px;
-   		width: 24%;
-   		height: 30px;
+   		font-size: 14px;
+   		width: 24.5%;
+   		height: 30px;   		
    	}
 
    	.listPuzzles{		
 		height:30px;
 	}
+	.listHeaders>div{
+		font-size:14px;
+	}
 
   }
+
+  /* ipad */
+  @media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px)  { 
+
+    .puzzlesDiv, .listHeaders{
+    	width:90%;
+    }
+
+    .listPuzzles>div{
+    	width:24.5%;
+    	font-size: 20px;
+    }
+
+    .listHeaders>div{
+    	font-size:20px;
+    }									
+ }

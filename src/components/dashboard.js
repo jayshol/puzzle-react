@@ -51,10 +51,10 @@ export class Dashboard extends React.Component{
 				<div className="contentDiv">
 					<h1>Dashboard</h1>
 					<div className="listHeaders">
-						<div>Puzzle Name</div>
-						<div>Expert Level</div>
-						<div>Time Taken</div>
-						<div>Date Solved</div>
+						<div>Name</div>
+						<div>Level</div>
+						<div>Time</div>
+						<div>Date</div>
 					</div>
 					<div className="puzzlesDiv">
 						{puzzles}
