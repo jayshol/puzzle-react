@@ -9,7 +9,7 @@
 	border: 1px solid blue;	
 }
 
-fieldset{
+.loginForm>fieldset{
 	height:100%;
   	padding: 35px;  
   	border:0;
