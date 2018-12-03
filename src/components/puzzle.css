@@ -212,7 +212,8 @@
 	}	
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
 	.ImageDiv{	
 			height: 220px;
 			width: 250px;				
@@ -224,7 +225,7 @@
 
 		#slotsSpan{
 			height: 200px;
-			width: 200px;
+			width: 250px;
 			overflow:hidden;	
 		}
 
@@ -253,7 +254,7 @@ and (max-device-width : 568px)  {
 
 		#slotsSpan{
 			height: 200px;
-			width: 200px;
+			width: 250px;
 			overflow:hidden;	
 		}
 
@@ -279,3 +280,86 @@ and (max-device-width : 568px)  {
 		}
 
 } 
+
+@media only screen and (min-width: 480px), 
+	   only screen and (max-width: 560px) {
+
+	.wrapperDiv{
+		width: 100%;
+	   	float: left;
+	 /*  	position: relative;
+	   	overflow: hidden;   */
+	   	text-align:center;
+	   	background-color: #edecaa; 
+	   	/*height:94vh;  */	
+	}
+
+	.outerDiv{
+		/*position:relative;*/
+		/*height:85vh;*/
+		/*background-color: blue; */
+	}	
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 568px)  {
+    	
+    	.ImageDiv{	
+			height: 200px;
+			width: 250px;				
+		}
+		#puzzleImage{
+			width:100%;
+			height:100%; 
+		}
+
+		#slotsSpan{
+			height: 200px;
+			width: 250px;
+			overflow:hidden;	
+		}
+
+		.piecesContainer{
+			height: 140px;
+			width: 170px;
+			margin:15px auto 12px auto;
+		}
+		.wrapperDiv{
+			height:80vh;
+		}
+		h1 {
+	   		font-size:16px;
+	   	}
+	   	h2 {
+	   		font-size: 14px;
+	   	}
+	   	.buttonCls{
+			height: 30px;
+			width: 100px;
+			font-size: 18px;
+			margin : 10px auto 5px auto;
+		}
+
+} 
+
+@media only screen 
+    and (max-width : 720px) {
+
+    	.ImageDiv{	
+			height: 300px;
+			width: 300px;				
+		}
+		#puzzleImage{
+			width:100%;
+			height:100%; 
+		}
+
+		#slotsSpan{
+			height: 300px;
+			width: 300px;
+			overflow:hidden;	
+		}		
+
+}
+
